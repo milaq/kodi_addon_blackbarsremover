@@ -9,8 +9,8 @@ overscaling.
 
 # Installation
 
-Go to the releases page and download an addon zip to your Kodi machine. You can then install it by using the "install
-from zip file" option.
+Go to the releases page and download an addon zip or get the [master branch](https://github.com/milaq/kodi_addon_blackbarsremover/archive/master.zip)
+version and place it on your Kodi machine. You can then install it by using the "install from zip file" option.
 
 # Usage
 
