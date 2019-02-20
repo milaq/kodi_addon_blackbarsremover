@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<strings>
+    <string id="30001">Adjusting to zoom amount</string>
+    <string id="30002">No zoom adjustment necessary</string>
+    <string id="30003">Could not get black bars compensation value</string>
+</strings>
