@@ -36,9 +36,16 @@ aspectratio_compensation = aspectratio_video - (aspectratio_video * (blackbarcom
 ratio_correction = (aspectratio_compensation / aspectratio_screen)
 zoomlevel = math.ceil(ratio_correction * 100.0) / 100.0
 
+user_compensation = int(addon.getSetting('user_compensation'))
+zoomlevel = zoomlevel + (user_compensation / 100.0)
+
+maximum_zoom_level = float(1.0 + int(addon.getSetting('maximum_compensation')) / 100.0)
+if zoomlevel > maximum_zoom_level:
+    zoomlevel = maximum_zoom_level
+
 if zoomlevel <= 1.0:
     notify(addon.getLocalizedString(30002))
     sys.exit(1)
 
-notify(addon.getLocalizedString(30001) + ": " + str(zoomlevel))
+notify(addon.getLocalizedString(30001) + " (" + str(int((zoomlevel - 1.0) * 100.0)) + "%)")
 apply_zoom_legacy(zoomlevel)
