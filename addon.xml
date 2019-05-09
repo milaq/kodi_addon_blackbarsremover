@@ -2,7 +2,7 @@
 <addon 
     id="script.video.blackbarsremover"
     name="Black Bars Remover"
-    version="1.0.0"
+    version="1.2.0"
     provider-name="milaq">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
