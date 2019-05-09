@@ -28,4 +28,4 @@ E.g. to have the script run on pressing the "Record" button:
 </keymap>
 ```
 
-See [https://kodi.wiki/view/Keymap]() for more info.
+See [the keymap section in the Kodi wiki](https://kodi.wiki/view/Keymap) for more info.
