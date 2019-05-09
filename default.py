@@ -26,7 +26,7 @@ if 'result' in blackbarcomp_json:
     if 'value' in blackbarcomp_json['result']:
         blackbarcomp = int(blackbarcomp_json['result']['value'])
 
-if not blackbarcomp:
+if blackbarcomp is None:
     notify(addon.getLocalizedString(30003))
     sys.exit(1)
 
