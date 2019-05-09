@@ -3,6 +3,7 @@
     <string id="30001">Removing black bars</string>
     <string id="30002">No zoom adjustment necessary</string>
     <string id="30003">Could not read black bars compensation value</string>
+    <string id="30004">Could not apply zoom</string>
 
     <string id="32001">General</string>
 
