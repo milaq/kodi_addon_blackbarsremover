@@ -18,8 +18,7 @@ class Player(xbmc.Player):
     def isPlaying(self):
         return self.playing
 
-    def onPlayBackStarted(self):
-        xbmc.sleep(2000)
+    def onAVStarted(self):
         if self.isPlayingVideo():
             self.playing = True
 
