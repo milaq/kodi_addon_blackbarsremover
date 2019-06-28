@@ -2,30 +2,22 @@
 
 # Introduction
 
-Black Bars Remover is a simple addon for Kodi which allows you to scale/fit the playing video to your screen height,
-eliminating all black bars.
-This also takes Kodi's "minimise black bars" setting into consideration. It only zooms the correct amount without
-overscaling.
+Black Bars Remover is a simple addon for Kodi which allows automatic scaling/fitting the playing video to your screen height, eliminating all black bars.
+This also takes Kodi's "minimise black bars" setting into consideration. It only zooms the correct amount without overscaling.
+
+# Requirements
+
+Since version 2.0.0, this addon requires at least Kodi version 18.2 (Leia).
+
+If you are still using an older Kodi version, please use the (non-automatic) addon version 1.x.x.
 
 # Installation
 
-Go to the releases page and download an addon zip or get the [master branch](https://github.com/milaq/kodi_addon_blackbarsremover/archive/master.zip)
-version and place it on your Kodi machine. You can then install it by using the "install from zip file" option.
+Go to the releases page and download an addon zip or get the [master branch](https://github.com/milaq/kodi_addon_blackbarsremover/archive/master.zip) version and place it on your Kodi machine. You can then install it by using the "install from zip file" option.
 
-# Usage
+# Configuration
 
-You can easily map the script to one of your remote buttons by modifying/creating
-`.kodi/userdata/keymaps/keyboard.xml`.
+If enabled, the addon automatically adjusts the zoomlevel when a video is playing.
+It will adjust the zoom to fit the screen up to the configured maximum compensation (30% by default).
 
-E.g. to have the script run on pressing the "Record" button:
-```
-<keymap>
-  <FullscreenVideo>
-    <remote>
-      <record>RunScript(script.video.blackbarsremover,0)</record>
-    </remote>
-  </FullscreenVideo>
-</keymap>
-```
-
-See [the keymap section in the Kodi wiki](https://kodi.wiki/view/Keymap) for more info.
+The addon settings allow you to configure the maximum amount of automatic zoom and optional additional zoom compensation.

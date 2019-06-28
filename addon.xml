@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <addon 
-    id="script.video.blackbarsremover"
+    id="service.blackbarsremover"
     name="Black Bars Remover"
-    version="1.2.0"
+    version="2.0.0"
     provider-name="milaq">
     <requires>
         <import addon="xbmc.python" version="2.25.0"/>
-        <import addon="xbmc.addon" version="17.0.0"/>
     </requires>
-    <extension point="xbmc.python.script" library="default.py">
-        <provides>video executable</provides>
-    </extension>
+    <extension point="xbmc.service" library="service.py"/>
     <extension point="xbmc.addon.metadata">
-        <summary lang="en">Fit video to screen on execution</summary>
-        <description lang="en">Allows you to get rid of any black bars on the press of a button. This addon also respects Kodi's "minimise black bars" setting.</description>
+        <summary lang="en">Automatically fit video to screen</summary>
+        <description lang="en">Automatically adjusts the zoomlevel to eliminate black bars in videos. This addon also respects Kodi's "minimise black bars" setting.</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
         <forum></forum>
