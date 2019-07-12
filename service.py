@@ -79,7 +79,7 @@ monitor = xbmc.Monitor()
 player = Player()
 dialog = xbmcgui.Dialog()
 while not monitor.abortRequested():
-    if monitor.waitForAbort(2):
+    if monitor.waitForAbort(1):
         break
     if player.isPlaying():
         last_file = player.getLastFile()
