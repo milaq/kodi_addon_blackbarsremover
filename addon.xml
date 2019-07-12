@@ -12,7 +12,7 @@
         <summary lang="en">Automatically fit video to screen</summary>
         <description lang="en">Automatically adjusts the zoomlevel to eliminate black bars in videos. This addon also respects Kodi's "minimise black bars" setting.</description>
         <platform>all</platform>
-        <license>GNU GENERAL PUBLIC LICENSE. Version 2, June 1991</license>
+        <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
         <forum></forum>
         <website></website>
         <email></email>
