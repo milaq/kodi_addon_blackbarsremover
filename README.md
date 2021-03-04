@@ -7,7 +7,8 @@ This also takes Kodi's "minimise black bars" setting into consideration. It only
 
 # Requirements
 
-Since version 2.0.0, this addon requires at least Kodi version 18.2 (Leia).
+* Since version 2.0.0, this addon requires at least Kodi version 18.2 (Leia).
+* Since version 3.0.0, this addon requires at least Kodi version 19 (Matrix).
 
 If you are still using an older Kodi version, please use the (non-automatic) addon version 1.x.x.
 
@@ -18,6 +19,6 @@ Go to the releases page and download an addon zip or get the [master branch](htt
 # Configuration
 
 If enabled, the addon automatically adjusts the zoomlevel when a video is playing.
-It will adjust the zoom to fit the screen up to the configured maximum compensation (30% by default).
+It will adjust the zoom to fit the screen up to the configured maximum compensation value.
 
 The addon settings allow you to configure the maximum amount of automatic zoom and optional additional zoom compensation.

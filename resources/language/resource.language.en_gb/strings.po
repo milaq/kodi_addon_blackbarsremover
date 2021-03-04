@@ -1,0 +1,30 @@
+# Kodi Media Center language file
+# Addon Name: Black Bars Remover
+# Addon id: service.blackbarsremover
+# Addon Provider: milaq
+msgid ""
+msgstr ""
+
+msgctxt "#30001"
+msgid "Removed black bars (%i%%)"
+msgstr ""
+
+msgctxt "#30003"
+msgid "Could not read black bars compensation value"
+msgstr ""
+
+msgctxt "#30004"
+msgid "Could not apply zoomlevel"
+msgstr ""
+
+msgctxt "#32031"
+msgid "Maximum compensation"
+msgstr ""
+
+msgctxt "#32032"
+msgid "Additional compensation"
+msgstr ""
+
+msgctxt "#32033"
+msgid "Show notifications"
+msgstr ""

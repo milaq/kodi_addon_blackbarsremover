@@ -74,7 +74,7 @@ while not monitor.abortRequested():
         last_file = player.getLastFile()
         try:
             current_file = player.getPlayingFile()
-        except Exception as e:
+        except Exception:
             player.setPlaying(False)
             continue
         if last_file is None or last_file != current_file:
@@ -97,7 +97,7 @@ while not monitor.abortRequested():
             if apply_zoom(zoomlevel):
                 log("Applied zoom level successfully", xbmc.LOGINFO)
                 if addon.getSetting('zoom_apply_notification') == 'true':
-                    notify(addon.getLocalizedString(30001) + " (" + str(int((zoomlevel - 1.0) * 100.0)) + "%)")
+                    notify(addon.getLocalizedString(30001) % int(round((zoomlevel - 1.0) * 100.0)))
             else:
                 log("Could not apply zoom", xbmc.LOGERROR)
                 notify(addon.getLocalizedString(30004))
