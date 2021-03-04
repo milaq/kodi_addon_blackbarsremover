@@ -1,5 +1,6 @@
 import xbmc
 
+
 class Player(xbmc.Player):
     def __init__(self):
         self.playing = False
