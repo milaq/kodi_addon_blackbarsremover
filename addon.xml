@@ -11,6 +11,8 @@
     <extension point="xbmc.addon.metadata">
         <summary lang="en_gb">Automatically fit video to screen</summary>
         <description lang="en_gb">Automatically adjusts the zoomlevel to eliminate black bars in videos. This addon also respects Kodi's "minimise black bars" setting.</description>
+        <summary lang="it_it">Adatta automaticamente il video allo schermo</summary>
+        <description lang="it_it">Imposta automaticamente il livello di zoom per eliminare le barre nere nei video. Questo addon tiene anche conto dell'impostazione di Kodi "minimizza barre nere".</description>
         <platform>all</platform>
         <license>GNU GENERAL PUBLIC LICENSE. Version 3, June 2007</license>
         <forum></forum>
