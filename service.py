@@ -46,13 +46,19 @@ def get_desired_zoom_level():
     blackbarcomp = None
     blackbarcomp_raw = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Settings.GetSettingValue", "params": {"setting": "videoplayer.errorinaspect"}, "id": 1}')
     blackbarcomp_json = json.loads(blackbarcomp_raw)
-    if 'result' in blackbarcomp_json:
-        if 'value' in blackbarcomp_json['result']:
-            blackbarcomp = int(blackbarcomp_json['result']['value'])
-    if blackbarcomp is None:
+    try:
+        blackbarcomp = int(blackbarcomp_json['result']['value'])
+    except (TypeError, KeyError):
         return 0
     aspectratio_screen = float(xbmcgui.getScreenWidth()) / float(xbmcgui.getScreenHeight())
-    aspectratio_video = xbmc.RenderCapture().getAspectRatio()
+    log("Current screen aspect ratio: %f" % aspectratio_screen, xbmc.LOGDEBUG)
+    aspectratio_video_raw = xbmc.executeJSONRPC('{"jsonrpc": "2.0", "method": "Player.GetProperties", "params": {"playerid": 1, "properties": ["currentvideostream"]}, "id": 1}')
+    aspectratio_video_json = json.loads(aspectratio_video_raw)
+    try:
+        aspectratio_video = float(aspectratio_video_json['result']['currentvideostream']['width']) / float(aspectratio_video_json['result']['currentvideostream']['height'])
+    except (TypeError, KeyError):
+        return 0
+    log("Current video aspect ratio: %f" % aspectratio_video, xbmc.LOGDEBUG)
     aspectratio_compensation = aspectratio_video - (aspectratio_video * (blackbarcomp / 100.0))
     ratio_correction = (aspectratio_compensation / aspectratio_screen)
     zoomlevel = math.ceil(ratio_correction * 100.0) / 100.0
