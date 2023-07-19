@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <settings>
     <setting id="zoom_apply_notification" type="bool" label="32033" default="true" />
-    <setting id="maximum_compensation" type="slider" label="32031" default="30" range="10,50" option="int" />
+    <setting id="maximum_compensation" type="slider" label="32031" default="20" range="10,50" option="int" />
     <setting id="user_compensation" type="slider" label="32032" default="0" range="-20,20" option="int" />
 </settings>
