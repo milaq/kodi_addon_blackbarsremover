@@ -1,5 +1,6 @@
 import sys
 import math
+import random
 
 import json
 import xbmc
@@ -62,11 +63,13 @@ def get_desired_zoom_level():
     aspectratio_compensation = aspectratio_video - (aspectratio_video * (blackbarcomp / 100.0))
     ratio_correction = (aspectratio_compensation / aspectratio_screen)
     zoomlevel = math.ceil(ratio_correction * 100.0) / 100.0
-    user_compensation = int(addon.getSetting('user_compensation'))
-    zoomlevel = zoomlevel + (user_compensation / 100.0)
     maximum_zoom_level = float(1.0 + int(addon.getSetting('maximum_compensation')) / 100.0)
     if zoomlevel > maximum_zoom_level:
         zoomlevel = maximum_zoom_level
+        random_compensation_subtraction = int(addon.getSetting('random_compensation_subtraction'))
+        zoomlevel = zoomlevel - (random.randint(0, random_compensation_subtraction) / 100.0)
+    if zoomlevel < 1.0:
+        zoomlevel = 1.0
     return zoomlevel
 
 
@@ -92,9 +95,6 @@ while not monitor.abortRequested():
                 notify(addon.getLocalizedString(30003))
                 continue
             log("Desired zoom level: %f" % zoomlevel, xbmc.LOGDEBUG)
-            if zoomlevel <= 1.0:
-                log("No zoom adjustment necessary", xbmc.LOGINFO)
-                continue
             zoomlevel_current = get_current_zoom_level()
             log("Current zoom level: %f" % zoomlevel_current, xbmc.LOGDEBUG)
             if zoomlevel_current == zoomlevel:

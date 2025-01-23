@@ -22,7 +22,7 @@ msgid "Maximum compensation"
 msgstr ""
 
 msgctxt "#32032"
-msgid "Additional compensation"
+msgid "Reduce compensation by random amount up to this value if fullscreen cannot be achieved (e.g. for OLED burn in prevention)"
 msgstr ""
 
 msgctxt "#32033"
